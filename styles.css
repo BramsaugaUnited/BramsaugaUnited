@@ -116,6 +116,18 @@ li:hover {
     }
 }
 
+@media only screen and (max-width: 500px) {
+
+  .topSection {
+    margin-top: 0;
+  }
+
+  .midSection {
+    margin-top: 3rem;
+  }
+}
+
+
 /* Mid Section */
 
 .midSection {
