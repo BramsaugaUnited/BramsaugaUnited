@@ -13,31 +13,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <link rel="icon" href="images/logo.png" type="image/icon type">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <section id="section1">
         <nav class="navBar">
             <ul>
-                <div class="menuLogo"><a href="index.html#section1"><img src="images/logo.png" alt=""></a></div>
-                <li><a href="index.html#section2">ABOUT</a></li>
-                <li><a href="index.html#section3">NEWS & MEDIA</a></li>
-                <li><a href="index.html#section4">CONTACT</a></li>
+                <div class="menuLogo"><a href="/"><img src="images/logo.png" alt="Bramsauga United"></a></div>
+                <li><a class="navItems" href="/#About">ABOUT</a></li>
+                <li><a class="navItems" href="/#News">NEWS & MEDIA</a></li>
+                <li><a class="navItems" href="/#Contact">CONTACT</a></li>
             </ul>
         </nav>
 
         <div class="topSection">
-            <div class="mainImg"><img class="headingImage" src="images/bramsaugateam.jpg" alt=""></div>
+            <div class="mainImg"><img class="headingImage" src="images/bramsaugateam.jpg" alt="Bramsauga United 30+ team"></div>
         </div>
     </section>
 
 
-    <section id="section2">
+    <section id="About">
         <div class="midSection">
-            <h1 class="midSectionHeader">UPCOMING MATCH</h1>
+            <h1 class="midSectionHeader">UPCOMING MATCHES SCHEDULE</h1>
             <div class="matchPicture">
                 <div class="matches">
-                    <img class="matchesImg" src="images/matchSample.png" alt="">
+                    <img class="matchesImg" src="images/matchSample.png" alt="Bramsauga United upcoming matches">
                 </div>
                 <div class="matches">
                     <img class="matchesImg" src="images/HFC.png" alt="">
@@ -45,22 +46,35 @@
                 <div class="matches">
                     <img class="matchesImg" src="images/sampleDemo2.png" alt="">
                 </div>
-                <div class="matches"></div>
+                <div class="matches">
+                    <img class="matchesImg" src="images/sampleDemo4.png" alt="">
+                </div>
+                <div class="matches">
+                    <img class="matchesImg" src="images/toBeReveleadSample.png" alt="">
+                </div>
+                <div class="matches">
+                    <img class="matchesImg" src="images/toBeReveleadSample.png" alt="">
+                </div>
             </div>    
         </div>
         <div class="aboutSection">
-            <div class="aboutInfo">
-                Bramsauga United is a dynamic and passionate local soccer club based in the vibrant community of Bramsauga. We are committed to promoting the love for the beautiful game and fostering a sense of camaraderie among players of all ages and skill levels.
+            <div class="aboutInfoWithButton">
+                <div class="aboutInfo">
+                    Bramsauga United is a dynamic and passionate local soccer club based in the vibrant community of Bramsauga. We are committed to promoting the love for the beautiful game and fostering a sense of camaraderie among players of all ages and skill levels.
+                </div>
+                <button onclick="location.href = '/About.html'" class="learnMoreButton">Learn More</button>
+
             </div>
+            
             <div class="aboutImage">
-                <img class="matchesImg" src="images/aboutImage.jpg" alt="">
+                <img class="matchesImg" src="images/aboutImage.jpg" alt="Bramsauga United">
             </div>
         </div>
     </section>
 
-    <section id="section3">
+    <section id="News">
         <div class="newsSection">
-            <h2 class="newsHeading">News</h2>
+            <h2 class="newsHeading">News & Media</h2>
 
             <div class="slideshow-container">
                 <div class="mySlides fade">
@@ -112,21 +126,21 @@
     </div>
     </div>
 
-    <section id="section4">
+    <section id="Contact">
         <div class="contact">
             <div>Get In Touch</div>
             <div class="container">
-                <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <form action="https://formsubmit.co/bramsaugaunited1@gmail.com" method="POST">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
             
-                <input type="submit" value="Submit">
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </div>

@@ -5,13 +5,17 @@
     font-family: 'Lato', sans-serif;
 }
 
+body {
+  background-color: #edf6f9;
+}
+
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #FFFFFF;
 }
 
 a:hover {
-    color: rgb(112, 112, 112);
+    color: rgb(38, 0, 144);
 }
 
 img {
@@ -33,15 +37,15 @@ img {
 .navBar {
     width: 100vw;
     height: 3.5rem;
-    background-color: #fff;
+    background-color: #e29578;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
     font-size: 0.9rem;
-    z-index: 1
+    z-index: 1;
 }
 
 .sticky{
@@ -65,6 +69,7 @@ ul {
     width: 3.5rem;
     cursor: pointer;
 }
+
 
 li:hover {
     cursor: pointer;
@@ -141,13 +146,16 @@ li:hover {
 }
 
 .midSectionHeader {
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #006d77;
 }
 
 .matchPicture {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -155,13 +163,17 @@ li:hover {
     width: 15rem;
     height: 15rem;
     background-color: rgb(151, 219, 219);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 2px;
-    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;    cursor: pointer;
     transition: all 1s;
+    border-radius: 0.3rem;
 }
 
 .matches:hover {
     transform: scale(1);
+}
+
+.matchesImg {
+  border-radius: 0.3rem;
 }
 
 
@@ -178,7 +190,7 @@ li:hover {
 @media only screen and (max-width: 866px) {
 
     .midSectionHeader {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
     .matchPicture {
         flex-wrap: wrap;
@@ -195,17 +207,17 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   width: 100vw;
-  height: 20rem;
-  background-color: rgb(175, 178, 184);
+  height: 25rem;
+  background-color: #ffddd2;
 }
-
 
 .aboutImage {
-  width: 25rem;
+  width: 30rem;
   height: auto;
 }
+
 .aboutInfo {
   width: 30vw;
   display: flex;
@@ -214,10 +226,40 @@ li:hover {
   overflow: hidden;
   text-align: center;
   font-weight: lighter;
+  color:black;
+}
+
+.aboutInfoWithButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.learnMoreButton {
+    background-color: #e29578;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 0.4rem;
+  
 }
 
 
-@media only screen and (max-width: 750px) {
+.learnMoreButton:hover {
+  background-color: #83c5be;
+  color: white;
+}
+
+
+@media only screen and (max-width: 850px) {
 
   .aboutImage {
     width: 20rem;
@@ -226,16 +268,22 @@ li:hover {
 
   .aboutSection {
     flex-direction: column;
-    height: 25rem;
+    height: 28rem;
+    gap: 2.6rem;
   }
 
   .aboutInfo {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 75vw;
+  }
+
+  .learnMoreButton {
+    padding: 12px 24px;
+
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 390px) {
 
   .aboutImage {
     width: 17rem;
@@ -245,11 +293,17 @@ li:hover {
   .aboutSection {
     flex-direction: column;
     height: 25rem;
+    gap: 2.6rem;
+
   }
 
   .aboutInfo {
     font-size: 0.7rem;
     width: 80vw;
+  }
+
+  .learnMoreButton {
+    padding: 9px 18px;
   }
 }
 
@@ -265,8 +319,8 @@ li:hover {
 }
 
 .newsHeading {
-    margin-bottom: 3rem;
-    font-weight: lighter;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
 }
 .slideshow-container {
     max-width: 1000px;
@@ -538,3 +592,67 @@ grid-row: span 2;
         margin:0% 3%;
         }
     }
+
+
+
+
+/* About Page CSS */
+
+
+.mainSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.aboutPageHeading {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+.AboutPageImage {
+  width: 85vw;
+}
+
+.aboutMePageDescription {
+  width: 80vw;
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 850px) {
+  .aboutMePageDescription {
+    width: 75vw;
+    opacity: 0.6;
+  }
+
+  .aboutPageHeading {
+    font-size: 1.5rem;
+  }
+
+  .mainSection {
+    gap: 2rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+  .aboutMePageDescription {
+    width: 80vw;
+    font-size: 0.8rem;
+    text-align:justify;
+  }
+
+  .aboutPageHeading {
+    font-size: 1.1rem;
+  }
+
+
+.mainSection {
+  gap: 2rem;
+}
+
+}
