@@ -1,3 +1,23 @@
+// For NavBar
+let hamMenuIcon = document.getElementById("ham-menu");
+let navBar = document.getElementById("nav-bar");
+let navLinks = navBar.querySelectorAll("li");
+
+hamMenuIcon.addEventListener("click", () => {
+  navBar.classList.toggle("active");
+  hamMenuIcon.classList.toggle("fa-times");
+});
+navLinks.forEach((navLinks) => {
+  navLinks.addEventListener("click", () => {
+    navBar.classList.remove("active");
+    hamMenuIcon.classList.toggle("fa-times");
+  });
+});
+
+
+
+// Slide Show Container For News 
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,12 +44,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
-
-
-$(window).scroll(function(){
-  if($(this).scrollTop() > 100){
-      $('.navBar').addClass('sticky')
-  } else{
-      $('.navBar').removeClass('sticky')
-  }
-});
