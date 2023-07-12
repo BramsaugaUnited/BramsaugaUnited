@@ -15,10 +15,11 @@
 
 
 .aboutMePageDescription p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgb(0, 0, 0);
     opacity: 0.5;
     width: 80vw;
+    text-align: center;
 }
 
 .moduleTwo {

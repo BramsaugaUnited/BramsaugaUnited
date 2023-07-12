@@ -15,15 +15,14 @@
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .ModuleOneLogo img {
-    width: 17rem;
-    height: 17rem;
+    width: 15rem;
+    height: 15rem;
 }
 
 .introduction {
