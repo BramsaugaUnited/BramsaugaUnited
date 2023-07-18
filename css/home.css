@@ -8,20 +8,21 @@
 }
 
 .moduleOne {
-    background-image: url('/img/events/teamphoto.jpeg');
+    background-image: url('/img/events/HomePagePic.jpeg');
     min-height: 100vh; 
     max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 5rem;
 }
 
 .ModuleOneLogo img {
-    width: 15rem;
-    height: 15rem;
+    width: 17rem;
+    height: 17rem;
 }
 
 .introduction {
@@ -30,7 +31,7 @@
     flex-direction: column;
 }
 .introduction h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: rgb(255, 255, 255);
     font-weight: bold;
     margin: 0;
@@ -42,7 +43,38 @@
     opacity: 70%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1090px) {
+
+    .moduleOne {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .ModuleOneLogo img {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .introduction {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .introduction h1 {
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    .introduction p {
+        font-size: 0.9rem;
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
 
     .moduleOne {
         flex-direction: column;
@@ -61,20 +93,20 @@
         gap: 0.2rem;
     }
     .introduction h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
     
     .introduction p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         color: rgb(255, 255, 255);
     }
 
     .moduleOne {
-        background-image: url('/img/events/teamphotoMobile.png');
-    }
+        background-image: url('/img/events/mobileHomePagePic.jpeg');
 
+    }
 }
 
 
@@ -160,8 +192,7 @@
     .moduleTwo h2 {
         font-size: 1rem;
     }
-
-     
+ 
 }
 
 
