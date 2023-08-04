@@ -43,4 +43,4 @@ function showSlides(n) {
 
 
 
-//facebook page plugin
+// news slideshow

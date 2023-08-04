@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #7b66c8;
+    background: linear-gradient(90deg, rgba(123,102,200,1) 29%, rgba(76,60,136,1) 55%, rgba(33,26,59,1) 100%);
     padding: 3rem 0;
     width: 100vw;
 }
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 1.5rem;
 }
 
 .footerSectionLeft h4 {
@@ -26,7 +26,6 @@
 }
 
 .socialMediaButtons {
-    background-color: #7b66c8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .footerSectionLeft  h6 {
@@ -55,7 +55,6 @@
     font-weight: 100;
     margin: 0;
 }
-
 
 .quickLinks {
     width: 20rem;
@@ -67,7 +66,7 @@
     gap: 1rem;
 }
 .quickLinkButton {
-    background-color: #264d79; /* Green */
+    background-color: #7b66c8; /* Green */
     border: none;
     color: white;
     width: 15rem;
@@ -77,11 +76,11 @@
     font-size: 16px;
     margin: 3px 2px;
     cursor: pointer;
-    border-radius: 0.5rem;
-}
+    border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 
 .quickLinkButton:hover {
-    background-color: #026181;
+    background-color: #644eb6;
     color: white;
 }
 
@@ -99,7 +98,7 @@
         font-size: 2rem;
     }
     .footerSectionLeft {
-        gap: 1rem;
+        gap: 1.2rem;
     }
 
 
