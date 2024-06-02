@@ -1,3 +1,4 @@
+
 .footer-text {
         color: #fff; /* Use the same color as the navbar */
         font-family: 'YourFont', sans-serif; /* Use the same font-family as the navbar */
@@ -76,6 +77,5 @@
     transform: scale(1.05) rotateY(10deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
 
 
