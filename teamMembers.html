@@ -32,7 +32,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="bramsaugaStory.html">Bramsauga Story</a></li>
-                  <li><a class="dropdown-item" href="members.html">Board of Directors</a></li>
+                  <li><a class="dropdown-item" href="boardMembers.html">Board of Directors</a></li>
                   <li><a class="dropdown-item" href="teamMembers.html">Team Members</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="events.html">Events Archive</a></li>
@@ -78,84 +78,68 @@
         </div>
       </nav>
 
- 
-     
-      <div class="container-fluid position-relative d-flex justify-content-center align-items-center p-0" style="height: 80vh; overflow: hidden;">
-        <div class="background-animation"></div>
-        <div class="overlay"></div>
-        <div class="row w-100">
-            <div class="col-lg-12">
-                <main role="main" class="inner cover text-center text-white" style="margin-top: 100px; position: relative; z-index: 1;">
-                    <h1 class="cover-heading">Bramsauga United</h1>
-                    <p class="lead mb-4" style="max-width: 50rem; margin: 0 auto; color: rgb(238, 230, 230); font-size: 1rem;">Soccer, Culture, and Unity among Nepalese Community in Canada</p>
-                    <div class="nav-item">
-                        <a href="./membership.html" class="btn btn-light me-2">Become a Member</a>
-                    </div>
-                </main>
+
+        <section class="py-2 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Our Team Members</font></font></h1>
+              <p class="lead text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Welcome our new Bramsauga United members! While they bring fresh energy and perspectives, our seasoned current members lead with dedication, propelling our team forward both on and off the field.</font></font></p>
+              <p>
+                <a href="membership.html" class="btn btn-success my-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Become a member</font></font></a>
+              </p>
             </div>
-        </div>
-    </div>
-
-    
-
-      <div class="container mt-5">
-        <h4 class="text-center text-muted">Vision Within Bramsauga</h1>
-        <div class="row">
-          <div class= "text-center col-md-10 offset-md-1">
-            <p class="text-muted mt-4">Bramsauga United, founded in 2022, has a rich tradition of success on and off the field. We are deeply committed to fostering a sense of community, sportsmanship, and excellence in everything we do. From our dedicated players to our passionate supporters, everyone plays a crucial role in the ongoing success of our club. With top-notch facilities, experienced coaching staff, and a vibrant atmosphere, we provide an environment where players of all ages and skill levels can thrive and reach their full potential. Whether you're a seasoned veteran or just starting your football journey, there's a place for you in our football family. Join us and be part of something special!</p>
           </div>
-        </div>
-      </div>
+        </section>
 
-
-
-      <div class="container mt-5">
-        <div class="row ps-2 g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
-            <div class="feature col">
-                <i class="bi bi-trophy fs-1 d-block mx-auto mb-3"></i>                
-                <h3 class="fs-2 text-body-emphasis">Achievement</h3>
-                <p>Within the landscape of achievement, resilience is our cornerstone. It withstands the tests of time and propels us forward, forging pathways to triumph amidst the most daunting challenges.</p>         
-            </div>
-            <div class="feature col">
-                <i class="bi bi-alarm fs-1 d-block mx-auto mb-3"></i>                
-                <h3 class="fs-2 text-body-emphasis">Discipline</h3>
-                <p>Discipline is our anchor in the storm of challenges. It fortifies us when adversities loom large and transforms teams into unbreakable forces.</p>
-            </div>
-            <div class="feature col">
-                <i class="bi bi-calendar-check fs-1 d-block mx-auto mb-3"></i>                
-                <h3 class="fs-2 text-body-emphasis">Team Morals</h3>
-                <p>In the realm of team morale, unity becomes our guiding light. It uplifts spirits when the journey gets arduous and binds us together with unwavering strength.</p>
-            </div>
-        </div>
+      <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="bg-danger text-light">First Name</th>
+                    <th class="bg-danger text-light">Last Name</th>
+                    <th class="bg-danger text-light">Membership Type</th>
+                </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
     </div>
-    
+
+
+    <script>
+      async function fetchData() {
+          const apiKey = 'AIzaSyA8G5NqIYif2-HHGW8Gd3f5OTbjuZWsbOY';
+          const sheetId = '1nVoOSb0ffC6gZa1DDVZLikW3AuOYSKATHk_Gyb6ZRAs';
+          const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1?key=${apiKey}`;
+
+          const response = await fetch(endpoint);
+          const data = await response.json();
+          return data.values;
+      }
+
+      async function displayData() {
+          const data = await fetchData();
+          const contentTable = document.getElementById('content');
+
+          data.forEach((row, index) => {
+              // Skip the first row (headers)
+              if (index === 0) return;
+
+              const rowElement = document.createElement('tr');
+              rowElement.innerHTML = `
+                  <td>${row[0]}</td>
+                  <td>${row[1]}</td>
+                  <td>${row[2]}</td>
+              `;
+              contentTable.appendChild(rowElement);
+          });
+      }
+
+      window.onload = displayData;
+  </script>
+
+
 
   
-  <div class="container mt-5 mb-5" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover;">
-    <div class="p-5 text-center  rounded-3">
-      <h1 class="mb-4 text-danger">Want to Sponsor Us?</h1>
-      <p class="lead mb-4 text-light">Join our team of sponsors and partners and help support the future of Bramsauga United. Your support helps us provide the best training and facilities for our players.</p>
-      <a href="/contact.html" class="btn btn-success btn-lg">Learn More</a>
-    </div>
-  </div>
-
-  <div class="container mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="mb-3">Bramsauga United: Our Journey & Adventure</h2>
-            <p>
-                We have been an integral part of the Brampton and Mississauga communities, nurturing young talents and promoting a love for soccer. Our journey began with a group of passionate individuals dedicated to fostering sportsmanship, teamwork, and excellence on and off the field. Over the years, we have faced numerous challenges, celebrated countless victories, and created unforgettable memories. From local tournaments to national championships, our adventure continues to inspire and bring together players, families, and fans. Join us as we strive for greatness and build a legacy of sportsmanship and community spirit.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <img src="/images/events/allMembers.jpeg" class="img-fluid" alt="Bramsauga United Soccer Team">
-        </div>
-    </div>
-</div>
-      
-
-
-
       <footer class="bg-coral pt-5 pb-2"> <!-- Reduced padding at the bottom -->
         <div class="container">
             <div class="row ps-2">
