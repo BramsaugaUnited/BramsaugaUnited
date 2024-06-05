@@ -13,61 +13,74 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="/images/LogoNoBg.png" alt="Logo" class="d-inline-block align-text-top" style="height: 60px;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="/images/LogoNoBg.png" alt="Logo" class="d-inline-block align-text-top" style="height: 60px;">
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Bramsauga United</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="bramsaugaStory.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
             </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Bramsauga United</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="bramsaugaStory.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About Us
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="bramsaugaStory.html">Bramsauga Story</a></li>
-                  <li><a class="dropdown-item" href="members.html">Board of Directors</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="events.html">Events Archive</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sponsors.html">Sponsors</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="media.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Media Hub
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="media.html">Photos Archive</a></li>
-                  <li><a class="dropdown-item" href="media.html">Videos Archive</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="bramsaugaStory.html">Bramsauga Story</a></li>
+              <li><a class="dropdown-item" href="members.html">Board of Directors</a></li>
+              <li><a class="dropdown-item" href="teamMembers.html">Team Members</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="events.html">Events Archive</a></li>
             </ul>
-            <div class="nav-item">
-              <a href="clubInfo.html" class="btn btn-outline-success me-2 mb-1 mb-sm-0">The Club</a>
-            </div>
-            <div class="nav-item">
-                <a href="membership.html" class="btn btn-outline-primary me-2">Membership</a>
-            </div>
-          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sponsors.html">Sponsors</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="media.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Media Hub
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="media.html">Photos Archive</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="media.html">Videos Archive</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="media.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              The Club
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="PlayersProfile.html">Players Stats</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="clubInfo.html">Club Information</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <div class="nav-item">
+            <a href="membership.html" class="btn btn-outline-primary me-2 mb-2 mb-sm-0">Membership</a>
         </div>
-      </nav>
-     
+        <div class="nav-item">
+          <a href="calendar.html" class="btn btn-success me-2 mb-2 mb-sm-0">View Calendar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-      <div class="container mt-5 mb-5">
+   
+
+      <div id="protected-container"  class="container mt-5 mb-5" style="display: none;">
         <div class="col-12">
           <div class="bg-success text-white text-center py-01 mb-4 rounded">
             <h2>Bramsauga United: Stats for Players Over 30</h2>
@@ -123,8 +136,25 @@
           </div>
         </div>
       </div>
-      
 
+      <div id="password-form" class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <form>
+              <div class="mb-3 d-flex justify-content-center">
+                <label for="password" class="form-label">Enter password:</label>
+              </div>
+              <div class="mb-3 d-flex justify-content-center">
+                <input type="password" class="form-control" id="password" name="password" style="max-width: 250px;">
+              </div>
+              <div class="mb-3 d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" onclick="checkPassword()">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
 
 
 
@@ -176,10 +206,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password === "nepal12") {
+          document.getElementById("password-form").style.display = "none";
+          document.getElementById("protected-container").style.display = "block";
+        } else {
+          alert("Incorrect password!");
+        }
+      }
+    </script>
     
     
-    
-    
+   
     
 </body>
 </html>

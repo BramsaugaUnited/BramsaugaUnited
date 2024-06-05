@@ -33,6 +33,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="bramsaugaStory.html">Bramsauga Story</a></li>
               <li><a class="dropdown-item" href="members.html">Board of Directors</a></li>
+              <li><a class="dropdown-item" href="teamMembers.html">Team Members</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="events.html">Events Archive</a></li>
             </ul>
@@ -49,7 +50,18 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="media.html">Photos Archive</a></li>
+              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="media.html">Videos Archive</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="media.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              The Club
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="PlayersProfile.html">Players Stats</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="clubInfo.html">Club Information</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -57,10 +69,10 @@
           </li>
         </ul>
         <div class="nav-item">
-          <a href="clubInfo.html" class="btn btn-outline-success me-2 mb-1 mb-sm-0">The Club</a>
+            <a href="membership.html" class="btn btn-outline-primary me-2 mb-2 mb-sm-0">Membership</a>
         </div>
         <div class="nav-item">
-            <a href="membership.html" class="btn btn-outline-primary me-2">Membership</a>
+          <a href="calendar.html" class="btn btn-success me-2 mb-2 mb-sm-0">View Calendar</a>
         </div>
       </div>
     </div>
@@ -169,7 +181,7 @@
 
 
       <div class="container mt-5 mb-5" >        
-        <form action="https://formsubmit.co/bramsaugafc2022@gmail.com" method="post" enctype="multipart/form-data">
+        <form id="myForm" action="https://formsubmit.co/bramsaugaunited1@gmail.com" method="post" enctype="multipart/form-data">
           <div class="form-group mb-3">
             <label for="firstName">First Name:</label>
             <input type="text" class="form-control" id="firstName" name="firstName" required>
@@ -224,8 +236,26 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+
+
+      <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // Retrieve form data
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            // For dropdowns, retrieve the selected value
+            const membership = document.getElementById('membership').value;
+    
+            // Store form data in localStorage
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
+            localStorage.setItem('membership', membership);
+        });
+    </script>
+    
       
 
+    
 
 
 
